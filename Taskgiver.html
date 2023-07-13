@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Task Manager</title>
+  <script>
+    function addTask() {
+      var taskName = document.getElementById("taskName").value;
+      var taskDate = document.getElementById("taskDate").value;
+      var task = { name: taskName, date: taskDate };
+      
+      // Send task data to the server or perform any desired actions
+      // You can use AJAX, fetch API, or any other preferred method
+      
+      alert("Task added: " + JSON.stringify(task));
+      resetForm();
+    }
+    
+    function resetForm() {
+      document.getElementById("taskName").value = "";
+      document.getElementById("taskDate").value = "";
+    }
+  </script>
+</head>
+<body>
+  <h1>Task Manager</h1>
+  
+  <label for="taskName">Task Name:</label>
+  <input type="text" id="taskName">
+  
+  <label for="taskDate">Task Date:</label>
+  <input type="date" id="taskDate">
+  
+  <button onclick="addTask()">Add Task</button>
+</body>
+</html>
